@@ -2,12 +2,12 @@
 
 Bem este é um exemplo básico de comunicação em tempo real de cliente e servidor.
 
-Para compreender este código é necessårio que se saiba o básico de programação Web, pois só vou fazer algumas demonstrações dessa ferramenta fantastica que é o socket.io.
+Para compreender este código é necessário que se saiba o básico de programação Web, pois só vou fazer algumas demonstrações dessa ferramenta fantastica que é o socket.io.
 
-Vamo lá, comece inicializando um projeto `node` em um diretório de sua preferência e com o nome de sua preferência, este aqui se chama `first_socket.io`.
+Vamo lá, comece inicializando um projeto `node` em um diretório de sua preferência e com o nome de sua preferência, este aqui se chama `first-socket.io`.
 
 ```bash
-mkdir first_socket.io && cd first_socket.io && yarn init -y
+mkdir first-socket.io && cd first-socket.io && yarn init -y
 ```
 
 Agora instale as seguintes dependências:
@@ -48,10 +48,10 @@ app.get('/', (req, res)=> res.render('home'));
 http.listen(3000, ()=> console.log('running...'))
 ```
 
-Agora na raiz do seu projeto crie um dire†ório com o nome `views`, e dentro desse diretório crie um arquivo `home.ejs` com o seguinte conteúdo:
+Agora na raiz do seu projeto crie um diretório com o nome `views`, e dentro desse diretório crie um arquivo `home.ejs` com o seguinte conteúdo:
 
 ```html
-<!-- Estrutura båsica de um html -->
+<!-- Estrutura básica de um html -->
 <html>
   <body>
     <!-- Importando o socket.io -->
