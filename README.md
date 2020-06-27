@@ -51,13 +51,19 @@ http.listen(3000, ()=> console.log('running...'))
 Agora na raiz do seu projeto crie um dire†ório com o nome `views`, e dentro desse diretório crie um arquivo `home.ejs` com o seguinte conteúdo:
 
 ```html
+<!-- Estrutura båsica de um html -->
 <html>
   <body>
+    <!-- Importando o socket.io -->
     <script src="/socket.io/socket.io.js"></script>
     <script>
+      // instanciando a conexão com o servidor
       const socket = io()
+      // escutando um evento de 'msg'
       socket.on('msg', msg => {
+        // exibindo no console do navegador a variavel com o conteudo de 'msg'
         console.log(msg)
+        // enviando uma mensagem em um intervalo de 2.5s para o servidor.
         setInterval(()=> socket.emit('msg', {hello: 'node'}), 2500)
       })
     </script>
