@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const socket = io()
+      socket.on('msg', msg => {
+        console.log(msg)
+        setInterval(()=> socket.emit('msg', {hello: 'node'}), 2500)
+      })
+    </script>
+  </body>
+</html>
